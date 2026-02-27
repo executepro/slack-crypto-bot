@@ -1,0 +1,19 @@
+{
+  "name": "slack-crypto-bot",
+  "version": "1.0.0",
+  "description": "Slack bot for crypto price information",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "test": "node test.js",
+    "deploy-with-secrets": "wrangler secret put SLACK_BOT_TOKEN && wrangler secret put SLACK_SIGNING_SECRET && wrangler deploy"
+  },
+  "dependencies": {
+    "@slack/bolt": "^3.17.1"
+  },
+  "devDependencies": {
+    "wrangler": "^3.24.0"
+  }
+}
